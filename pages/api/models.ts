@@ -8,6 +8,25 @@ export const config = {
 
 const handler = async (req: Request): Promise<Response> => {
   try {
+
+    if (OPENAI_API_TYPE==='mistral')
+      return new Response(JSON.stringify([
+       {
+        id: 'mistral-tiny',
+        name: 'Mistral 7B'
+       },
+       {
+        id: 'mistral-small',
+        name: 'Mixtral 8x7B'
+       },
+       {
+        id: 'mistral-medium',
+        name: 'Mistral Medium'
+       }
+      ]), {
+        status: 200
+      })
+
     const { key } = (await req.json()) as {
       key: string;
     };
