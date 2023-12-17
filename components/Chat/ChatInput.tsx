@@ -386,11 +386,11 @@ export const ChatInput = ({
           rel="noreferrer"
           className="underline"
         >
-          ChatBot UI
+          Mistral UI
         </a>
         .{' '}
         {t(
-          "Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
+          "Mistral UI is an UI adapted by Christian Landgren. Please do not share this link as it costs me money per request.",
         )}
       </div>
     </div>
