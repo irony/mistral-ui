@@ -388,9 +388,8 @@ export const ChatInput = ({
         >
           Mistral UI
         </a>
-        .{' '}
         {t(
-          "Mistral UI is an UI adapted by Christian Landgren. Please do not share this link as it costs me money per request.",
+          ' är anpassad av Christian Landgren, Iteam. Dela inte länken då den använder min nyckel och kostar pengar per anrop.',
         )}
       </div>
     </div>
