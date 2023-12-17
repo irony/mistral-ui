@@ -9,7 +9,8 @@ export const config = {
 const handler = async (req: Request): Promise<Response> => {
   try {
 
-    if (OPENAI_API_TYPE==='mistral')
+    if (OPENAI_API_TYPE === 'mistral')
+      // TODO: remove this when Mistral has an endpoint for models
       return new Response(JSON.stringify([
        {
         id: 'mistral-tiny',
