@@ -10,7 +10,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
 
     if (OPENAI_API_TYPE==='mistral')
-      return [
+      return new Response([
        {
         id: 'mistral-tiny',
         name: 'Mistral 7B'
@@ -23,7 +23,10 @@ const handler = async (req: Request): Promise<Response> => {
         id: 'mistral-medium',
         name: 'Mistral Medium'
        }
-    ]
+    ], {
+      status: 200
+    })
+    
     const { key } = (await req.json()) as {
       key: string;
     };
