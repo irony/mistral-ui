@@ -9,9 +9,8 @@
 
 Mistral UI is an open source chat UI for Mistral AI models.
 
-See a [demo](https://twitter.com/mckaywrigley/status/1640380021423603713?s=46&t=AowqkodyK6B4JccSOxSPew).
+<img width="1237" alt="image" src="https://github.com/irony/mistral-ui/assets/395843/e6c79be0-e24c-4b47-8416-d9726b435ad1">
 
-![Chatbot UI](./public/screenshots/screenshot-0402023.jpg)
 
 ## Deploy
 
