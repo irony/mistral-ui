@@ -362,9 +362,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
           </div>
           <div className="text-center text-gray-500 dark:text-gray-400">
             <div className="mb-2">
-              Mistral UI hjälper dig att utvärdera den europeiska AI tjänsten
-              Mistral som ännu inte har ett UI men har ett bra API som du kan
-              testa genom att anävnda denna tjänst.
+              Mistral UI helps you to evaluate the european AI service Mistral
+              which has no UI yet but you can test with this code.
             </div>
             <div className="mb-2">
               It is <span className="italic">only</span> used to communicate

@@ -389,7 +389,7 @@ export const ChatInput = ({
           Mistral UI
         </a>
         {t(
-          ' är anpassad av Christian Landgren, Iteam. Dela inte länken då den använder min nyckel och kostar pengar per anrop.',
+          ' is customized by Christian Landgren, Iteam. Please do not overuse this services since it is using my API key which means it will cost me for every request.',
         )}
       </div>
     </div>
