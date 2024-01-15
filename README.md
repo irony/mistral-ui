@@ -1,27 +1,17 @@
-# Chatbot UI
+# Mistral UI
+(A fork of Chatbot UI)
 
 ## News
 
-V2 update coming soon...
+2023-12-19: First working version of Mistral UI, adapted to the Mistral API.
 
 ## About
 
-Chatbot UI is an open source chat UI for AI models.
+Mistral UI is an open source chat UI for Mistral AI models.
 
 See a [demo](https://twitter.com/mckaywrigley/status/1640380021423603713?s=46&t=AowqkodyK6B4JccSOxSPew).
 
 ![Chatbot UI](./public/screenshots/screenshot-0402023.jpg)
-
-## Updates
-
-Chatbot UI will be updated over time.
-
-Expect frequent improvements.
-
-**Next up:**
-
-- [ ] Sharing
-- [ ] "Bots"
 
 ## Deploy
 
@@ -36,14 +26,8 @@ Host your own live version of Chatbot UI with Vercel.
 Build locally:
 
 ```shell
-docker build -t chatgpt-ui .
-docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatgpt-ui
-```
-
-Pull from ghcr:
-
-```
-docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 ghcr.io/mckaywrigley/chatbot-ui:main
+docker build -t mistral-ui .
+docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 mistral-ui
 ```
 
 ## Running Locally
@@ -51,7 +35,7 @@ docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 ghcr.io/mckaywrigley/chatbot-
 **1. Clone Repo**
 
 ```bash
-git clone https://github.com/mckaywrigley/chatbot-ui.git
+git clone https://github.com/irony/mistral-ui.git
 ```
 
 **2. Install Dependencies**
@@ -62,15 +46,12 @@ npm i
 
 **3. Provide OpenAI API Key**
 
-Create a .env.local file in the root of the repo with your OpenAI API Key:
+Create a .env.local file in the root of the repo with your Mistral API Key (yes, the env key should be called OPENAI_API_KEY even if it's Mistral):
 
 ```bash
+OPENAI_API_TYPE=mistral
 OPENAI_API_KEY=YOUR_KEY
 ```
-
-> You can set `OPENAI_API_HOST` where access to the official OpenAI host is restricted or unavailable, allowing users to configure an alternative host for their specific needs.
-
-> Additionally, if you have multiple OpenAI Organizations, you can set `OPENAI_ORGANIZATION` to specify one.
 
 **4. Run App**
 
@@ -90,11 +71,11 @@ When deploying the application, the following environment variables can be set:
 | --------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | OPENAI_API_KEY                    |                                | The default API key used for authentication with OpenAI                                                                                   |
 | OPENAI_API_HOST                   | `https://api.openai.com`       | The base url, for Azure use `https://<endpoint>.openai.azure.com`                                                                         |
-| OPENAI_API_TYPE                   | `openai`                       | The API type, options are `openai` or `azure`                                                                                             |
+| OPENAI_API_TYPE                   | `openai`                       | The API type, options are `openai` or `azure` or `mistral`                                                                                             |
 | OPENAI_API_VERSION                | `2023-03-15-preview`           | Only applicable for Azure OpenAI                                                                                                          |
 | AZURE_DEPLOYMENT_ID               |                                | Needed when Azure OpenAI, Ref [Azure OpenAI API](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference#completions) |
 | OPENAI_ORGANIZATION               |                                | Your OpenAI organization ID                                                                                                               |
-| DEFAULT_MODEL                     | `gpt-3.5-turbo`                | The default model to use on new conversations, for Azure use `gpt-35-turbo`                                                               |
+| DEFAULT_MODEL                     | `mistral-medium`                | The default model to use on new conversations, for Azure use `gpt-35-turbo`                                                               |
 | NEXT_PUBLIC_DEFAULT_SYSTEM_PROMPT | [see here](utils/app/const.ts) | The default system prompt to use on new conversations                                                                                     |
 | NEXT_PUBLIC_DEFAULT_TEMPERATURE   | 1                              | The default temperature to use on new conversations                                                                                       |
 | GOOGLE_API_KEY                    |                                | See [Custom Search JSON API documentation][GCSE]                                                                                          |
