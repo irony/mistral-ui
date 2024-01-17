@@ -381,16 +381,24 @@ export const ChatInput = ({
       </div>
       <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
-          href="https://github.com/mckaywrigley/chatbot-ui"
+          href="https://github.com/irony/mistral-ui"
           target="_blank"
           rel="noreferrer"
           className="underline"
         >
           Mistral UI
         </a>
-        {t(
-          ' is customized by Christian Landgren, Iteam. Please do not overuse this services since it is using my API key which means it will cost me for every request.',
-        )}
+        {t(' is an adapted version of the open source project ')}
+        <a
+          href="https://github.com/mckaywrigley/chatbot-ui"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+          Chatbot UI
+        </a>
+
+        {t('. Adaption by Christian Landgren, Iteam.')}
       </div>
     </div>
   );
