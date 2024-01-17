@@ -53,7 +53,7 @@ export const ModelSelect = () => {
       </div>
       <div className="w-full mt-3 text-left text-neutral-700 dark:text-neutral-400 flex items-center">
         <a
-          href="https://platform.openai.com/account/usage"
+          href="https://console.mistral.ai/billing"
           target="_blank"
           className="flex items-center"
         >
